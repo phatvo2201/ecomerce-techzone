@@ -1,0 +1,121 @@
+@import "../../css-config/mixins.scss";
+
+.products-container {
+  margin: 50px 0;
+  
+  @include md {
+    margin: 75px 0;
+  }
+  
+  .sec-heading {
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    
+    @include md {
+      margin-bottom: 35px;
+      font-size: 24px;
+    }
+    
+    &:after {
+      content: "";
+      display: block;
+      margin-top: 5px;
+      width: 50px;
+      height: 3px;
+      background-color: #8e2de2;
+      
+      @include md {
+        margin-top: 10px;
+      }
+    }
+  }
+  
+  .filters-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    
+    @include md {
+      margin-bottom: 30px;
+    }
+  }
+  
+  .filters {
+    display: flex;
+    align-items: center;
+    
+    @include md {
+      margin-right: 30px;
+    }
+    
+    label {
+      display: flex;
+      align-items: center;
+      font-size: 16px;
+      margin-right: 10px;
+      
+      @include md {
+        font-size: 18px;
+      }
+      
+      select {
+        font-size: 16px;
+        padding: 8px;
+        border-radius: 4px;
+        border: 1px solid #ddd;
+        
+        @include md {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+  
+  .products {
+    display: flex;
+    flex-flow: wrap;
+    gap: 10px;
+    
+    @include md {
+      gap: 20px;
+    }
+  }
+  
+  .slider-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .slider-track {
+    height: 6px;
+    background-color: #ddd;
+    border-radius: 3px;
+  }
+  
+  .slider-track.first {
+    border-radius: 3px 0 0 3px;
+  }
+  
+  .slider-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #8e2de2;
+    cursor: grab;
+    
+    &:active {
+      cursor: grabbing;
+    }
+  }
+  
+  .slider-value {
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+}
